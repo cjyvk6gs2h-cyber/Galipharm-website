@@ -1,0 +1,6 @@
+{
+  "name": "GaliPharm",
+  "description": "Official digital presentation of GaliPharm, the university pharmacy student club of the Faculty of Medicine of Annaba. “Let’s make pharmacy great again.”",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
