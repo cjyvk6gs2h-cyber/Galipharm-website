@@ -1,106 +1,92 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
   <defs>
-    <!-- Gradients & Filters -->
-    <linearGradient id="gpGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Left text arc (top to bottom on left side) -->
+    <path id="leftArc" d="M 118,360 A 182,182 0 0,1 118,140" fill="none" />
+    <!-- Right text arc (top to bottom on right side) -->
+    <path id="rightArc" d="M 382,140 A 182,182 0 0,1 382,360" fill="none" />
+    
+    <!-- Capsule gradients for vibrant depth -->
+    <linearGradient id="greenCapsule" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#34D399" />
       <stop offset="100%" stop-color="#10B981" />
     </linearGradient>
-    <linearGradient id="gpCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#22D3EE" />
+    <linearGradient id="cyanCapsule" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
       <stop offset="100%" stop-color="#06B6D4" />
     </linearGradient>
-    <linearGradient id="gpRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#334155" />
-      <stop offset="100%" stop-color="#1E293B" />
-    </linearGradient>
-
-    <!-- Circular paths for text -->
-    <!-- Left text arc (top to bottom) -->
-    <path id="textArcLeft" d="M 120,380 A 185,185 0 0,1 120,120" fill="none" />
-    <!-- Right text arc (top to bottom) -->
-    <path id="textArcRight" d="M 380,120 A 185,185 0 0,1 380,380" fill="none" />
   </defs>
 
-  <!-- Outer Double Circular Borders -->
-  <circle cx="250" cy="250" r="235" fill="none" stroke="#2D3748" stroke-width="12" />
-  <circle cx="250" cy="250" r="208" fill="none" stroke="#374151" stroke-width="3" />
+  <!-- Outer Main Circular Frame -->
+  <circle cx="250" cy="250" r="232" fill="none" stroke="#2B2B2B" stroke-width="13" />
+  
+  <!-- Outer Segment Arcs (Design Accents) -->
+  <path d="M 225,18 A 232,232 0 0,0 120,48" fill="none" stroke="#2B2B2B" stroke-width="7" stroke-linecap="round" />
+  <path d="M 380,48 A 232,232 0 0,0 275,18" fill="none" stroke="#2B2B2B" stroke-width="7" stroke-linecap="round" />
+  <path d="M 135,445 A 232,232 0 0,0 215,482" fill="none" stroke="#2B2B2B" stroke-width="7" stroke-linecap="round" />
+  <path d="M 285,482 A 232,232 0 0,0 365,445" fill="none" stroke="#2B2B2B" stroke-width="7" stroke-linecap="round" />
 
-  <!-- Circular Arc Text: GALI PHARM -->
-  <text font-family="'Montserrat', 'Arial Black', sans-serif" font-size="34" font-weight="900" fill="#2D3748" letter-spacing="7">
-    <textPath href="#textArcLeft" startOffset="50%" text-anchor="middle">
-      • GALI PHARM •
+  <!-- The Two Side GALIPHARM Texts (Left and Right only) -->
+  <text font-family="'Montserrat', 'Arial Black', sans-serif" font-size="33" font-weight="900" fill="#2B2B2B" letter-spacing="6.5">
+    <textPath href="#leftArc" startOffset="50%" text-anchor="middle">
+      • GALIPHARM •
     </textPath>
   </text>
-  <text font-family="'Montserrat', 'Arial Black', sans-serif" font-size="34" font-weight="900" fill="#2D3748" letter-spacing="7">
-    <textPath href="#textArcRight" startOffset="50%" text-anchor="middle">
-      • GALI PHARM •
+  <text font-family="'Montserrat', 'Arial Black', sans-serif" font-size="33" font-weight="900" fill="#2B2B2B" letter-spacing="6.5">
+    <textPath href="#rightArc" startOffset="50%" text-anchor="middle">
+      • GALIPHARM •
     </textPath>
   </text>
 
-  <!-- Central Staff of Asclepius (Dark Rod + Top Knob) -->
-  <circle cx="250" cy="50" r="18" fill="#2D3748" />
-  <rect x="243" y="65" width="14" height="230" rx="7" fill="#2D3748" />
+  <!-- Staff of Asclepius (Central Rod and Top Sphere) -->
+  <circle cx="250" cy="52" r="21" fill="#2B2B2B" />
+  <rect x="242" y="66" width="16" height="236" rx="8" fill="#2B2B2B" />
 
-  <!-- The Two Intertwined Serpents (Asclepius & Caduceus Symbolism) -->
-  <!-- Left Serpent (Pharmacy Green) -->
-  <path d="M 235,75 C 190,75 170,105 180,125 C 192,145 250,150 250,185 C 250,215 200,215 205,245 C 210,270 240,285 245,310 L 220,320 C 235,300 220,280 215,260 C 210,230 235,215 230,195 C 220,165 160,150 160,115 C 160,85 195,60 235,60 Z" fill="#22C55E" />
-  <!-- Left Snake Head Detail -->
-  <path d="M 235,68 C 220,68 200,82 205,98 C 212,112 238,108 245,95 C 248,85 245,72 235,68 Z" fill="#22C55E" />
-  <circle cx="218" cy="85" r="2.5" fill="#FFFFFF" />
+  <!-- Double Serpents (Caduceus) -->
+  <!-- Green Serpent (Left) -->
+  <path d="M 235,74 C 185,74 165,108 178,128 C 194,148 250,154 250,188 C 250,218 194,218 198,248 C 204,272 234,288 242,312 L 216,326 C 230,302 216,282 210,262 C 204,232 230,218 226,198 C 216,168 152,154 152,116 C 152,84 195,58 235,58 Z" fill="#22C55E" />
+  <circle cx="218" cy="88" r="14" fill="#22C55E" />
 
-  <!-- Right Serpent (Medical Cyan / Turquoise) -->
-  <path d="M 265,75 C 310,75 330,105 320,125 C 308,145 250,150 250,185 C 250,215 300,215 295,245 C 290,270 260,285 255,310 L 280,320 C 265,300 280,280 285,260 C 290,230 265,215 270,195 C 280,165 340,150 340,115 C 340,85 305,60 265,60 Z" fill="#06B6D4" />
-  <!-- Right Snake Head Detail -->
-  <path d="M 265,68 C 280,68 300,82 295,98 C 288,112 262,108 255,95 C 252,85 255,72 265,68 Z" fill="#06B6D4" />
-  <circle cx="282" cy="85" r="2.5" fill="#FFFFFF" />
+  <!-- Cyan Serpent (Right) -->
+  <path d="M 265,74 C 315,74 335,108 322,128 C 306,148 250,154 250,188 C 250,218 306,218 302,248 C 296,272 266,288 258,312 L 284,326 C 270,302 284,282 290,262 C 296,232 270,218 274,198 C 284,168 348,154 348,116 C 348,84 305,58 265,58 Z" fill="#06B6D4" />
+  <circle cx="282" cy="88" r="14" fill="#06B6D4" />
 
-  <!-- Middle Intersecting Curves & Tail Tips -->
-  <path d="M 245,310 L 220,320 C 235,305 248,312 245,310 Z" fill="#22C55E" />
-  <path d="M 255,310 L 280,320 C 265,305 252,312 255,310 Z" fill="#06B6D4" />
-
-  <!-- Orbital Elliptical Rings (Stylized Planetary / Molecular Orbit) -->
-  <g fill="none" stroke="#2D3748" stroke-linecap="round">
-    <!-- Ring 1 (Inner) -->
-    <ellipse cx="250" cy="240" rx="75" ry="32" stroke-width="7" transform="rotate(-15 250 240)" stroke-dasharray="280 200" />
-    <!-- Ring 2 -->
-    <ellipse cx="250" cy="240" rx="95" ry="40" stroke-width="8" transform="rotate(-15 250 240)" stroke-dasharray="320 250" />
-    <!-- Ring 3 -->
-    <ellipse cx="250" cy="240" rx="115" ry="48" stroke-width="9" transform="rotate(-15 250 240)" stroke-dasharray="380 300" />
-    <!-- Ring 4 (Outer) -->
-    <ellipse cx="250" cy="240" rx="135" ry="56" stroke-width="10" transform="rotate(-15 250 240)" stroke-dasharray="420 350" />
+  <!-- 3D Layered Orbital Perspective Rings (Superposed Ellipses) -->
+  <g fill="none" stroke="#2B2B2B" stroke-linecap="round">
+    <!-- Outer largest ring -->
+    <path d="M 125,248 C 125,215 190,190 270,192 C 345,195 385,222 375,250 C 365,276 300,294 225,290 C 160,286 130,268 140,248" stroke-width="12" />
+    <!-- Middle ring -->
+    <path d="M 148,244 C 148,220 200,202 262,204 C 322,206 354,226 348,248 C 340,268 288,282 230,278 C 178,275 152,260 160,244" stroke-width="9.5" />
+    <!-- Inner ring -->
+    <path d="M 172,240 C 172,224 212,212 255,214 C 298,216 322,230 318,246 C 312,260 275,270 232,268 C 195,265 176,252 182,240" stroke-width="7" />
   </g>
 
-  <!-- Molecular Micro-Beads & Particles Spilling Upward -->
+  <!-- Ascending Pharmaceutical Micro-Particles -->
   <g fill="#06B6D4">
-    <circle cx="250" cy="320" r="5" />
-    <circle cx="242" cy="332" r="6" />
-    <circle cx="258" cy="336" r="4.5" />
-    <circle cx="236" cy="346" r="4" />
-    <circle cx="250" cy="350" r="7" />
-    <circle cx="264" cy="352" r="5" />
-    <circle cx="228" cy="362" r="3.5" />
-    <circle cx="242" cy="366" r="6" />
-    <circle cx="256" cy="368" r="4" />
-    <circle cx="270" cy="364" r="5.5" />
+    <circle cx="250" cy="318" r="5" />
+    <circle cx="238" cy="330" r="6" fill="#22C55E" />
+    <circle cx="258" cy="334" r="5" />
+    <circle cx="232" cy="345" r="4.5" fill="#22C55E" />
+    <circle cx="250" cy="348" r="7" />
+    <circle cx="268" cy="352" r="5.5" />
+    <circle cx="224" cy="360" r="4" fill="#22C55E" />
+    <circle cx="242" cy="365" r="6" />
+    <circle cx="260" cy="368" r="5" fill="#22C55E" />
+    <circle cx="274" cy="362" r="5.5" />
     <circle cx="250" cy="378" r="6.5" />
   </g>
 
-  <!-- Open Pharmaceutical Capsule at Bottom -->
-  <!-- Left Capsule Half (Green) -->
-  <g transform="translate(195, 400) rotate(-45)">
-    <!-- Capsule Body -->
-    <rect x="-30" y="-15" width="70" height="42" rx="21" fill="#22C55E" />
-    <!-- Inner Rim / Opening -->
-    <ellipse cx="38" cy="6" rx="12" ry="21" fill="#15803D" />
-    <ellipse cx="38" cy="6" rx="8" ry="16" fill="#14532D" />
+  <!-- Open Pharmaceutical Capsule (Angled 3D Halves) -->
+  <!-- Left Half: Emerald Green -->
+  <g transform="translate(192, 404) rotate(-42)">
+    <rect x="-34" y="-18" width="78" height="46" rx="23" fill="#22C55E" />
+    <ellipse cx="42" cy="5" rx="12" ry="23" fill="#16A34A" />
+    <ellipse cx="42" cy="5" rx="7" ry="17" fill="#15803D" />
   </g>
 
-  <!-- Right Capsule Half (Cyan Blue) -->
-  <g transform="translate(305, 400) rotate(45)">
-    <!-- Capsule Body -->
-    <rect x="-40" y="-15" width="70" height="42" rx="21" fill="#06B6D4" />
-    <!-- Inner Rim / Opening -->
-    <ellipse cx="-38" cy="6" rx="12" ry="21" fill="#0E7490" />
-    <ellipse cx="-38" cy="6" rx="8" ry="16" fill="#164E63" />
+  <!-- Right Half: Cyan Blue -->
+  <g transform="translate(308, 404) rotate(42)">
+    <rect x="-44" y="-18" width="78" height="46" rx="23" fill="#06B6D4" />
+    <ellipse cx="-42" cy="5" rx="12" ry="23" fill="#0891B2" />
+    <ellipse cx="-42" cy="5" rx="7" ry="17" fill="#0E7490" />
   </g>
 </svg>
