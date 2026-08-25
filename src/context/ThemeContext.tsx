@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { Theme } from '../types';
+import { safeStorage } from '../lib/storage';
 
 interface ThemeContextType {
   theme: Theme;
@@ -11,21 +12,25 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setThemeState] = useState<Theme>(() => {
-    const saved = localStorage.getItem('galipharm_theme') as Theme | null;
+    const saved = safeStorage.getItem('galipharm_theme') as Theme | null;
     if (saved === 'light' || saved === 'dark') return saved;
-    return 'dark'; // Defaulting to the deep pharmaceutical dark green theme that matches the logo
+    return 'dark'; // Defaulting to the deep pharmaceutical dark theme that matches the brand
   });
 
   useEffect(() => {
-    const root = document.documentElement;
-    if (theme === 'dark') {
-      root.classList.add('dark');
-      root.classList.remove('light');
-    } else {
-      root.classList.remove('dark');
-      root.classList.add('light');
+    try {
+      const root = document.documentElement;
+      if (theme === 'dark') {
+        root.classList.add('dark');
+        root.classList.remove('light');
+      } else {
+        root.classList.remove('dark');
+        root.classList.add('light');
+      }
+      safeStorage.setItem('galipharm_theme', theme);
+    } catch {
+      // Safe fallback
     }
-    localStorage.setItem('galipharm_theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {
