@@ -20,12 +20,21 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   useEffect(() => {
     try {
       const root = document.documentElement;
+      const body = document.body;
       if (theme === 'dark') {
         root.classList.add('dark');
         root.classList.remove('light');
+        if (body) {
+          body.classList.add('dark');
+          body.classList.remove('light');
+        }
       } else {
         root.classList.remove('dark');
         root.classList.add('light');
+        if (body) {
+          body.classList.remove('dark');
+          body.classList.add('light');
+        }
       }
       safeStorage.setItem('galipharm_theme', theme);
     } catch {
