@@ -34,6 +34,7 @@ export const CLUB_INFO: ClubInfo = {
     instagram: 'https://www.instagram.com/galipharm__?igsi=ajRidDc2dmkydHdx&utm_source=qr',
     facebook: 'https://www.facebook.com/share/19T7MJLZhN/?mibextid=wwXIfr',
     linkedin: 'https://www.linkedin.com/company/galipharm/',
+    tiktok: 'https://www.tiktok.com/@galipharm?_r=1&_t=ZS-99BCsOPnOk9',
     email: 'galipharm1@gmail.com',
   },
 };

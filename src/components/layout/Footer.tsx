@@ -152,17 +152,38 @@ export const Footer: React.FC<FooterProps> = ({
                 </div>
                 <span>LinkedIn</span>
               </a>
+              <a
+                href={CLUB_INFO.socialLinks.tiktok}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 text-slate-300 light:text-slate-700 hover:text-emerald-400 light:hover:text-emerald-600 transition-colors"
+              >
+                <div className="p-1.5 rounded-lg bg-slate-900 light:bg-white border border-slate-800 light:border-slate-300 text-slate-100 light:text-slate-800">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-3.5 h-3.5"
+                    aria-hidden="true"
+                  >
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.85.12V9.33a6.33 6.33 0 0 0-.85-.06A6.34 6.34 0 0 0 3.14 15.6a6.34 6.34 0 0 0 10.82 4.48 6.3 6.3 0 0 0 1.86-4.48V8.71a8.21 8.21 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.14z" />
+                  </svg>
+                </div>
+                <span>TikTok</span>
+              </a>
 
-              {/* Direct email display (Not a link) */}
-              <div className="flex items-center gap-2 text-slate-300 light:text-slate-700 pt-1">
-                <div className="p-1.5 rounded-lg bg-slate-900 light:bg-white border border-slate-800 light:border-slate-300 text-emerald-400 flex-shrink-0">
+              {/* Direct email display & clickable mailto */}
+              <a
+                href={`mailto:${CLUB_INFO.socialLinks.email}`}
+                className="flex items-center gap-2 text-slate-300 light:text-slate-700 hover:text-emerald-400 light:hover:text-emerald-600 transition-colors pt-1 group"
+              >
+                <div className="p-1.5 rounded-lg bg-slate-900 light:bg-white border border-slate-800 light:border-slate-300 text-emerald-400 flex-shrink-0 group-hover:border-emerald-500/40">
                   <Mail className="w-3.5 h-3.5" />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col text-left">
                   <span className="text-[11px] text-slate-400 light:text-slate-500 font-medium">Club email :</span>
-                  <span className="font-mono text-emerald-400 font-bold select-all text-xs">{CLUB_INFO.socialLinks.email}</span>
+                  <span className="font-mono text-emerald-400 font-bold select-all text-xs group-hover:underline">{CLUB_INFO.socialLinks.email}</span>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>

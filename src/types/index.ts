@@ -6,6 +6,7 @@ export interface SocialLinks {
   instagram: string;
   facebook: string;
   linkedin: string;
+  tiktok: string;
   email: string;
 }
 

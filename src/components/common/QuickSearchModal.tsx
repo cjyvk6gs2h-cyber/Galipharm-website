@@ -120,6 +120,7 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
       'contact'.includes(q) ||
       'email'.includes(q) ||
       'instagram'.includes(q) ||
+      'tiktok'.includes(q) ||
       'facebook'.includes(q) ||
       'linkedin'.includes(q)
     ) {
@@ -130,8 +131,8 @@ export const QuickSearchModal: React.FC<QuickSearchModalProps> = ({
         type: 'contact',
         sectionId: 'contact',
         desc: isFr
-          ? 'Instagram, Facebook, LinkedIn et email de contact de GaliPharm.'
-          : 'Instagram, Facebook, LinkedIn, and official contact email for GaliPharm.',
+          ? 'Instagram, TikTok, Facebook, LinkedIn et email de contact de GaliPharm.'
+          : 'Instagram, TikTok, Facebook, LinkedIn, and official contact email for GaliPharm.',
       });
     }
 
