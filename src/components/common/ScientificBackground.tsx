@@ -41,7 +41,21 @@ export const ScientificBackground: React.FC = () => {
       height = canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize', handleResize);
+    let isRunning = true;
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        isRunning = false;
+        cancelAnimationFrame(animationFrameId);
+      } else {
+        if (!isRunning) {
+          isRunning = true;
+          animationFrameId = requestAnimationFrame(render);
+        }
+      }
+    };
+
+    window.addEventListener('resize', handleResize, { passive: true });
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     const formulas = [
       'C₈H₉NO₂ (Paracétamol)',
@@ -489,6 +503,7 @@ export const ScientificBackground: React.FC = () => {
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       cancelAnimationFrame(animationFrameId);
     };
   }, [theme, isDark]);
